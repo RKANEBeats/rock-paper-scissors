@@ -21,9 +21,18 @@ function playRound(playerSelection,computerSelection){
     return "You lose! Paper beats Rock."
     else if (playerSelection === "rock" && computerSelection === "scissors")
     return "You win! Rock beats Scissors."
+    else if (playerSelection === "paper" && computerSelection === "rock")
+    return "You win! Paper beats Rock."
+    else if (playerSelection === "paper" && computerSelection === "scissors")
+    return "You lose! Scissors beats Paper."
+    else if (playerSelection === "scissors" && computerSelection === "paper")
+    return "You win! Scissors beats Paper."
+    else if (playerSelection === "scissors" && computerSelection === "rock")
+    return "You lose! Rock beats Scissors"
     else if (playerSelection === computerSelection)
-    return "It's a Draw! Both chose Rock."
-
+    return `It's a Draw! Both chose ${playerSelection}.`
+    else (playerSelection === !("rock","paper","scissors"))
+    return "I'm pretty sure you're supposed to pick between Rock, Paper, or Scissors. Nice try though."
 }
 let playerSelection = prompt("What is your choice").toLowerCase();
 const computerSelection = getComputerChoice();
