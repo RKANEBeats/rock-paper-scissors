@@ -25,8 +25,23 @@ function playRound(playerSelection,computerSelection){
     return "It's a Draw! Both chose Rock."
 
 }
-const playerSelection = "rock";
+let playerSelection = prompt("What is your choice").toLowerCase();
 const computerSelection = getComputerChoice();
 
 console.log(computerSelection);
+console.log(playerSelection);
 console.log(playRound(playerSelection, computerSelection));
+
+/* Create new function that plays a 5-round game, keeps the score, and reports the winner at the end of a round 
+
+function playGame () {
+
+}
+
+playGame
+playGame
+playGame
+playGame
+playGame
+
+*/
